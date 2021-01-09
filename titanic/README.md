@@ -32,8 +32,3 @@ My ipynb : [my_first_data_analysis_for_titanic](https://github.com/RoadoneP/Mach
 - Data: Includes dataset provided by Kaggle for the competition
     * `train.csv` : Training data
     * `test.csv` : Testing data
-
-## Kaggle-heart-disease
-
-**Goal** : Presence of heart disease in the patient
-Kaggle : [Heart Disease](https://www.kaggle.com/ronitf/heart-disease-uci)
