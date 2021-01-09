@@ -1,4 +1,4 @@
-##Kaggle-heart-disease
+## Kaggle-heart-disease
 ----------------
 >Heart disease is the leading cause of death for people of most racial and ethnic groups in the United States, including African American, American Indian, Alaska Native, Hispanic, and white men. For women from the Pacific Islands and Asian American, American Indian, Alaska Native, and Hispanic women, heart disease is second only to cancer.
 >- This database contains 76 attributes, but all published experiments refer to using a subset of 14 of them. In particular, the Cleveland database is the only one that has been used by ML researchers to
@@ -10,7 +10,7 @@
 * [Cp vs Sex vs Exang and Modeling](https://github.com/RoadoneP/Machine_learning/blob/main/data_analysis_for_heart_disease.ipynb)
 * [Age vs Thalach](https://github.com/RoadoneP/Machine_learning/blob/main/data_analysis_for_heart_disease(Age_vs_Thalach).ipynb)
 
-###Contents
+### Contents
 ---
 >1. age
 >2. sex
