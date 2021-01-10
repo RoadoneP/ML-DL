@@ -8,8 +8,8 @@
 **Kaggle** : [Heart Disease](https://www.kaggle.com/ronitf/heart-disease-uci)
 
 **My ipynb**    
-* [Cp vs Sex vs Exang and Modeling](https://github.com/RoadoneP/Machine_learning/blob/main/data_analysis_for_heart_disease.ipynb)
-* [Age vs Thalach](https://github.com/RoadoneP/Machine_learning/blob/main/data_analysis_for_heart_disease(Age_vs_Thalach).ipynb)
+* [Cp vs Sex vs Exang and Modeling](https://github.com/RoadoneP/Machine_learning/blob/main/heart_disease/data_analysis_for_heart_disease.ipynb)
+* [Age vs Thalach](https://github.com/RoadoneP/Machine_learning/blob/main/heart_disease/data_analysis_for_heart_disease(Age_vs_Thalach).ipynb)
 
 ### Contents
 ```
