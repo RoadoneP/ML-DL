@@ -25,7 +25,7 @@ My ipynb : [my_first_data_analysis_for_titanic](https://github.com/RoadoneP/Mach
 7. Embarked
 8. Family - SibSp + Parch
 9. Fare
-**10. Feature Engineering**
+10. **Feature Engineering**
 
 ### Tool
 ------
