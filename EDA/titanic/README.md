@@ -10,7 +10,7 @@ Kaggle 데이터 셋인 Titanic Machine Learning From Disaster의 튜토리얼 �
 
 Kaggle : [Titanic Macgine Learning From Disaster](http://www.kaggle.com/c/titanic-gettingStarted).
 
-My ipynb : [my_first_data_analysis_for_titanic](https://github.com/RoadoneP/Machine_learning/blob/main/my_first_data_analysis_for_titanic.ipynb).
+My ipynb : [my_first_data_analysis_for_titanic](https://github.com/RoadoneP/Machine_learning/blob/main/EDA/titanic/my_first_data_analysis_for_titanic.ipynb).
 
 ![Image](https://ifh.cc/g/MdnW2t.jpg)
 
