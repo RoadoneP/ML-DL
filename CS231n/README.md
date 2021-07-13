@@ -10,4 +10,6 @@ cs231n assignments
 | assignment_1 | Two_layer_net, Features | 2021-07-13 | :white_check_mark: |
 | assignment_2 |                         |            |                    |
 
-any questions please email to :m: a01152a@gmail.com explanation here :link: [RoadoneP Velog](https://velog.io/@a01152a) :smile:
+Any questions please email to :m: a01152a@gmail.com 
+
+Explanation here :link: [RoadoneP Velog](https://velog.io/@a01152a) :smile:
