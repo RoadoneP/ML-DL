@@ -10,7 +10,7 @@ cs231n assignments
 | assignment_1 | Two_layer_net, Features | 2021-07-13 | :white_check_mark: |
 | assignment_2 |   FullyConnectedNets    | 2021-07-26 | :white_check_mark: |
 | assignment_2 |   BatchNormalization    | 2021-07-26 | :white_check_mark: |
-| assignment_1 |         Dropout         |            |                    |
+| assignment_1 |         Dropout         | 2021-07-27 | :white_check_mark: |
 | assignment_1 |  ConvolutionalNetworks  |            |                    |
 | assignment_2 |   PyTorch, TensorFlow   |            |                    |
 
