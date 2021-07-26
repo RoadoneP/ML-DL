@@ -8,6 +8,10 @@ cs231n assignments
 | assignment_1 |           Knn           | 2021-07-10 | :white_check_mark: |
 | assignment_1 |      SVM, Softmax       | 2021-07-11 | :white_check_mark: |
 | assignment_1 | Two_layer_net, Features | 2021-07-13 | :white_check_mark: |
-| assignment_2 |                         |            |                    |
+| assignment_2 |   FullyConnectedNets    | 2021-07-26 | :white_check_mark: |
+| assignment_2 |   BatchNormalization    | 2021-07-26 | :white_check_mark: |
+| assignment_1 |         Dropout         |            |                    |
+| assignment_1 |  ConvolutionalNetworks  |            |                    |
+| assignment_2 |   PyTorch, TensorFlow   |            |                    |
 
 any questions please email to :m: a01152a@gmail.com explanation here :link: [RoadoneP Velog](https://velog.io/@a01152a) :smile:

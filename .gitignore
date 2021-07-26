@@ -3,3 +3,9 @@ CS231n/assignment1/makepdf.py
 CS231n/assignment1/cs231n/datasets/
 CS231n/assignment1/cs231n/__pycache__/
 CS231n/assignment1/cs231n/classifiers/__pycache__/
+
+CS231n/assignment2/collectSubmission.sh
+CS231n/assignment2/makepdf.py
+CS231n/assignment2/cs231n/datasets/
+CS231n/assignment2/cs231n/__pycache__/
+CS231n/assignment2/cs231n/classifiers/__pycache__/
