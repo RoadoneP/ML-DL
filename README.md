@@ -14,7 +14,7 @@ cs231n assignments
 | assignment_2 |   BatchNormalization    | 2021-07-26 | :white_check_mark: |
 | assignment_1 |         Dropout         | 2021-07-27 | :white_check_mark: |
 | assignment_1 |  ConvolutionalNetworks  | 2021-07-29 | :white_check_mark: |
-| assignment_2 |   PyTorch, TensorFlow   |            |                    |
+| assignment_2 |   PyTorch, TensorFlow   | 2021-07-30 | :white_check_mark: |
 
 Any questions please email to :m: a01152a@gmail.com
 
