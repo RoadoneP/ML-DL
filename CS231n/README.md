@@ -13,6 +13,12 @@ cs231n assignments
 | assignment_1 |         Dropout         | 2021-07-27 | :white_check_mark: |
 | assignment_1 |  ConvolutionalNetworks  | 2021-07-29 | :white_check_mark: |
 | assignment_2 |   PyTorch, TensorFlow   | 2021-07-30 | :white_check_mark: |
+| assignment_3 |      RNN_Captioning     | 2021-08-03 | :white_check_mark: |
+| assignment_3 |  LSTM_Captioning  | 2021-08-04 | :white_check_mark: |
+| assignment_3 | Transformer_Captioning  | | |
+| assignment_3 |Generative_Adversarial_Networks | 2021-08-08 | :white_check_mark: |
+| assignment_3 |   Network_Visualization    | 2021-08-10 | :white_check_mark: |
+| assignment_3 | Self_Supervised_Learning  |  |  |
 
 Any questions please email to :m: a01152a@gmail.com 
 

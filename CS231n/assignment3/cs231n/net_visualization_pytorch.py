@@ -34,7 +34,13 @@ def compute_saliency_maps(X, y, model):
     ##############################################################################
     # *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
 
-    pass
+    # scores ( 5 , 1000)
+    scores = model(X)
+    # correct_scores(5, )
+    correct_scores = torch.squeeze(scores.gather(1, y.view(-1, 1)))
+    correct_scores.backward(torch.ones(y.shape[0]))
+    dx = np.absolute(X.grad)
+    saliency, _ = torch.max(dx, dim=1)
 
     # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
     ##############################################################################
@@ -76,7 +82,19 @@ def make_fooling_image(X, target_y, model):
     ##############################################################################
     # *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
 
-    pass
+    max_iter = 100
+    for i in range(max_iter):
+        scores = model(X_fooling)
+        target_score = scores[:, target_y]
+        if torch.argmax(scores) == target_y:
+            print("Finished in {} iterations".format(i))
+            break
+        target_score.backward()
+        dx = X_fooling.grad
+        with torch.no_grad():
+            X_fooling += learning_rate * dx
+        if i == max_iter - 1:
+            print("Not find a fooling model!")
 
     # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
     ##############################################################################
@@ -94,7 +112,14 @@ def class_visualization_update_step(img, model, target_y, l2_reg, learning_rate)
     ########################################################################
     # *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
 
-    pass
+    img = img.requires_grad_()
+    scores = model(img)
+    target_score = scores[:, target_y]
+    loss = target_score - l2_reg * torch.sum(img ** 2)
+    loss.backward()
+    dx = img.grad
+    with torch.no_grad():
+        img += learning_rate * dx
 
     # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
     ########################################################################
