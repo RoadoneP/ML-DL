@@ -38,7 +38,12 @@ class PositionalEncoding(nn.Module):
         ############################################################################
         # *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
 
-        pass
+        for i in range(max_len):
+            for j in range(embed_dim):
+                if j % 2 == 0:
+                    pe[:, i, j] = torch.sin(torch.tensor(i * 10000 ** (- j / embed_dim)))
+                else:
+                    pe[:, i, j] = torch.cos(torch.tensor(i * 10000 ** (-(j - 1) / embed_dim)))
 
         # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
         ############################################################################
@@ -70,7 +75,8 @@ class PositionalEncoding(nn.Module):
         ############################################################################
         # *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
 
-        pass
+        output = x + self.pe[:, :S, :]
+        output = self.dropout(output)
 
         # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
         ############################################################################
@@ -126,7 +132,10 @@ class MultiHeadAttention(nn.Module):
         ############################################################################
         # *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
 
-        pass
+        self.head = num_heads
+        self.dropout = nn.Dropout(p=dropout)
+        # sqrt(d/h)
+        self.scale = torch.sqrt(torch.FloatTensor([embed_dim // num_heads]))
 
         # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
         ############################################################################
@@ -174,7 +183,24 @@ class MultiHeadAttention(nn.Module):
         ############################################################################
         # *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
 
-        pass
+        H = self.head
+        E = D // H
+
+        # q (N, H, S, E) k (N, H, T, E) v (N, H, T, E)
+        q = self.query(query).reshape(N, S, H, E).permute(0, 2, 1, 3)
+        k = self.key(key).reshape(N, T, H, E).permute(0, 2, 1, 3)
+        v = self.value(key).reshape(N, T, H, E).permute(0, 2, 1, 3)
+
+        # k (N, H, E, T) -> (N, H, S , T)
+        attention = torch.matmul(q, k.permute(0, 1, 3, 2)) / self.scale
+
+        if attn_mask is not None:
+          attention = torch.masked_fill(attention, attn_mask == 0, -float('inf'))
+        attention = self.dropout(torch.softmax(attention, dim=-1))
+        output = torch.matmul(attention, v)
+        output = output.permute(0, 2, 1, 3).contiguous()
+        output = output.view(N, -1, D)
+        output = self.proj(output)
 
         # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
         ############################################################################
